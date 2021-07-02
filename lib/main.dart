@@ -1,3 +1,4 @@
+import 'package:final_project_uiux/Templates/widgets.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,10 @@ class Header extends StatelessWidget {
     return Container(
       color: Colors.grey,
       child: Row(
-        children: [Icon(Icons.search), Container(width: 70)],
+        children: [
+          Icon(Icons.search),
+          Container(width: 70),
+        ],
       ),
     );
   }
@@ -86,7 +90,7 @@ class Nave extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: hortaGreen,
       height: 80,
       child: Row(
         children: [
@@ -104,8 +108,16 @@ class Carousel extends StatelessWidget {
   const Carousel({Key? key}) : super(key: key);
 
   Widget mainImage() {
-    return Image(
-      image: AssetImage('assets/imagemFundo.jpeg'),
+    return Stack(
+      children: [
+        Image(
+          image: AssetImage('assets/imagemFundo.jpeg'),
+        ),
+        Text(
+          'Bem vindo\nHorti-frutti e mercearia',
+          style: TextStyle(fontSize: 30),
+        ),
+      ],
     );
   }
 
@@ -117,19 +129,109 @@ class Carousel extends StatelessWidget {
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
-Widget filterBar(){
-  return Container();
-}
 
-Widget productsGrid(){
-  return Container();
-}
+  Widget filterItem(String text) {
+    bool vai = false;
+    return Row(
+      children: [
+        Checkbox(
+          checkColor: hortaGreen,
+          value: vai,
+          onChanged: (bool? value) {
+            vai = !vai;
+          },
+        ),
+        Text(text),
+      ],
+    );
+  }
+
+  Widget filterBar() {
+    return Container(
+      color: hortaPurple,
+      child: Column(
+        children: [
+          Text('Promoções'),
+          filterItem('Ofertas do dia'),
+          filterItem('Ofertas da semana'),
+          filterItem('Frutas'),
+          filterItem('Hortaliças'),
+          filterItem('Geleia'),
+          Text('Promoções'),
+          filterItem('Ofertas do dia'),
+          filterItem('Ofertas da semana'),
+          filterItem('Frutas'),
+          filterItem('Hortaliças'),
+          filterItem('Geleia'),
+          Text('Promoções'),
+          filterItem('Ofertas do dia'),
+          filterItem('Ofertas da semana'),
+          filterItem('Frutas'),
+          filterItem('Hortaliças'),
+          filterItem('Geleia'),
+          Text('Promoções'),
+          filterItem('Ofertas do dia'),
+          filterItem('Ofertas da semana'),
+          filterItem('Frutas'),
+          filterItem('Hortaliças'),
+          filterItem('Geleia'),
+        ],
+      ),
+    );
+  }
+
+  Widget buyProduct(String product) {
+    return Container(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text('Banana'),
+            Image(
+              image: AssetImage('assets/$product.jpg'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('-'),
+                Text('1'),
+                Text('+'),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget productsGrid() {
+    return Container(
+      height: 800,
+      child: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 3,
+        children: <Widget>[
+          buyProduct('banana'),
+          buyProduct('couve'),
+          buyProduct('banana'),
+          buyProduct('couve'),
+          buyProduct('banana'),
+          buyProduct('couve'),
+          buyProduct('banana'),
+          buyProduct('couve'),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        filterBar(),
-        productsGrid(),
+        Expanded(flex: 2, child: filterBar()),
+        Expanded(flex: 6, child: productsGrid()),
       ],
     );
   }
@@ -152,14 +254,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          Nave(),
-          Carousel(),
-          MainScreen(),
-          Footer(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            Nave(),
+            Carousel(),
+            MainScreen(),
+            Footer(),
+          ],
+        ),
       ),
     );
   }
