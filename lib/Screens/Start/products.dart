@@ -71,31 +71,6 @@ class Products extends StatelessWidget {
     );
   }
 
-  /* Widget productsGrid() {
-    return Container(
-      height: 480,
-      child: GridView.count(
-        primary: false,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        physics: NeverScrollableScrollPhysics(),
-        crossAxisCount: 3,
-        children: <Widget>[
-          buyProduct('banana'),
-          buyProduct('couve'),
-          buyProduct('banana'),
-          buyProduct('couve'),
-          buyProduct('banana'),
-          buyProduct('couve'),
-          buyProduct('banana'),
-          buyProduct('couve'),
-        ],
-      ),
-    );
-  }
-*/
-
   Widget productsGrid() {
     return Container(
       padding: const EdgeInsets.all(10.0),
