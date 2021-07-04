@@ -10,11 +10,12 @@ class Nave extends StatelessWidget {
       color: hortaGreen,
       height: 80,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Expanded(child: Text('Início')),
-          Expanded(child: Text('Categorias')),
-          Expanded(child: Text('Ofertas')),
-          Expanded(child: Text('Produtos novos')),
+          Text('Início'),
+          Text('Categorias'),
+          Text('Ofertas'),
+          Text('Produtos novos'),
         ],
       ),
     );
