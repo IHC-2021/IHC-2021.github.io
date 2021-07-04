@@ -3,22 +3,24 @@ import 'package:flutter/material.dart';
 class Carousel extends StatelessWidget {
   const Carousel({Key? key}) : super(key: key);
 
-  Widget mainImage() {
-    return Stack(
-      children: [
-        Image(
-          image: AssetImage('assets/imagemFundo.jpeg'),
-        ),
-        Text(
-          'Bem vindo\nHorti-frutti e mercearia',
-          style: TextStyle(fontSize: 30),
-        ),
-      ],
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return mainImage();
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 300,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.fill,
+          image: NetworkImage("assets/imagemFundo.jpeg"),
+        ),
+      ),
+      child: Align(
+        alignment: Alignment.center,
+        child: Text(
+          'escrever um bemvindo\n firulado',
+          style: TextStyle(fontSize: 30),
+        ),
+      ),
+    );
   }
 }
