@@ -37,7 +37,9 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Text('Carrinho'),
-          Icon(Icons.shopping_cart),
+          IconButton(onPressed: (){
+
+          }, icon: Icon(Icons.shopping_cart)),
         ],
       ),
     );
