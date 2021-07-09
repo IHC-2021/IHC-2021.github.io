@@ -3,5 +3,4 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(home: StartScreen()));
-  int x = 3;
 }
