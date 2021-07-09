@@ -26,7 +26,9 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Text('São Carlos - SP'),
-          Icon(Icons.location_city),
+          IconButton(onPressed: (){
+
+          }, icon:  Icon(Icons.location_city)),
         ],
       ),
     );
@@ -49,8 +51,10 @@ class Header extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Text('Carrinho'),
-          Icon(Icons.person),
+          Text('Entrar'),
+          IconButton(onPressed: (){
+
+          }, icon: Icon(Icons.person)),
         ],
       ),
     );
