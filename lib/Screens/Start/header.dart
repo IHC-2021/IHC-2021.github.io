@@ -11,11 +11,16 @@ class Header extends StatelessWidget {
 
   Widget searchbar() {
     return Container(
-      color: Colors.grey,
+      color: Colors.grey.withOpacity(0.35),
       child: Row(
         children: [
           Icon(Icons.search),
-          Container(width: 70),
+          Text(
+          'Pesquisa...',
+          textAlign: TextAlign.start,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(fontWeight: FontWeight.normal, color: Colors.black38)),
+          Container(width: 10),
         ],
       ),
     );
@@ -64,7 +69,11 @@ class Header extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Icon(Icons.accessibility, color: Colors.blueAccent),
+          IconButton(onPressed: (){
+
+
+
+          }, icon: Icon(Icons.accessibility, color: Colors.blueAccent)),
         ],
       ),
     );

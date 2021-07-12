@@ -17,8 +17,8 @@ class Carousel extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Text(
-          'escrever um bemvindo\n firulado',
-          style: TextStyle(fontSize: 30),
+          'Bem Vindo!',
+          style: TextStyle(height: 0, fontSize: 100/*, foreground: Paint()*/),
         ),
       ),
     );

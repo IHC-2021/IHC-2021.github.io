@@ -61,9 +61,11 @@ class Products extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('-'),
-              Text('1'),
-              Text('+'),
+              IconButton(onPressed: (){},
+                icon: Icon(Icons.remove_circle_outline)),
+                Text('1'),
+              IconButton(onPressed: (){},
+                  icon: Icon(Icons.add_circle_outline)),
             ],
           )
         ],
