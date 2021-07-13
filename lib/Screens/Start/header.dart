@@ -57,7 +57,7 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Text('Entrar'),
-          IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+          IconButton(onPressed: () => changeScreen('login'), icon: Icon(Icons.person)),
         ],
       ),
     );
