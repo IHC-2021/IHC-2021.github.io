@@ -5,9 +5,9 @@ class Nave extends StatelessWidget {
   const Nave({Key? key, required this.changeScreen}) : super(key: key);
   final Function changeScreen;
 
-  Widget naveButton({required String text, Function? function}) {
+  Widget naveButton({required String text}) {
     return TextButton(
-      onPressed: function == null ? () {} : () => function,
+      onPressed: text == 'Início' ?()=> changeScreen('inicio') : () {},
       child: Text(
         text,
         style: TextStyle(color: Colors.white),
@@ -23,7 +23,7 @@ class Nave extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          naveButton(text: 'Início', function: changeScreen),
+          naveButton(text: 'Início'),
           naveButton(text: 'Categorias'),
           naveButton(text: 'Ofertas'),
           naveButton(text: 'Novos Produtos'),
