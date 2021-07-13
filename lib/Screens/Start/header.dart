@@ -54,103 +54,83 @@ class Header extends StatelessWidget {
   }
 
   Widget location() {
-    return Container(
-      width: 130,
-      height: 90,
-      child: TextButton(
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        ),
-        onPressed: () => log('location'),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('São Carlos - SP'),
-            Icon(Icons.location_city),
-          ],
-        ),
+    return TextButton(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+        overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
       ),
-    );
-  }
-
-  Widget shoppingCart() {
-    return Container(
-      width: 130,
-      height: 90,
-      child: TextButton(
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        ),
-        onPressed: () => changeScreen('carrinho'),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Carrinho'),
-            Icon(Icons.shopping_cart),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget login() {
-    return Container(
-      width: 130,
-      height: 90,
-      child: TextButton(
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        ),
-        onPressed: () => changeScreen('login'),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Entrar'),
-            Icon(Icons.person),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget accessibility() {
-    return Container(
-      height: 95,
-      width: 95,
+      onPressed: () => log('location'),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.accessibility, color: Colors.blueAccent)),
+          Text('São Carlos - SP'),
+          Icon(Icons.location_city),
         ],
       ),
     );
   }
 
+  Widget shoppingCart() {
+    return TextButton(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+        overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      ),
+      onPressed: () => changeScreen('carrinho'),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Carrinho'),
+          Icon(Icons.shopping_cart),
+        ],
+      ),
+    );
+  }
+
+  Widget login() {
+    return TextButton(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+        overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      ),
+      onPressed: () => changeScreen('login'),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Entrar'),
+          Icon(Icons.person),
+        ],
+      ),
+    );
+  }
+
+  Widget accessibility() {
+    return Row(
+      children: [
+        IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.accessibility, color: Colors.blueAccent)),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 113,
-      width: 1370,
-      child: Center(
-        child: Container(
-          height: 115,
-          constraints: BoxConstraints(maxHeight: 115, maxWidth: 1026),
-          width: 1026,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              logo(),
-              searchbar(),
-              location(),
-              shoppingCart(),
-              login(),
-              accessibility(),
-            ],
-          ),
+    return Center(
+      child: Container(
+        height: 115,
+        constraints: BoxConstraints(maxHeight: 115, maxWidth: 1026),
+        width: 1026,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            logo(),
+            searchbar(),
+            location(),
+            shoppingCart(),
+            login(),
+            accessibility(),
+          ],
         ),
       ),
     );
