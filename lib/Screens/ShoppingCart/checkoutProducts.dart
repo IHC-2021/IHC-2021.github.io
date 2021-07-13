@@ -8,22 +8,18 @@ class CheckoutProducts extends StatefulWidget {
 }
 
 class _CheckoutProductsState extends State<CheckoutProducts> {
-
-  Widget bananaExample(){
+  Widget bananaExample() {
     return Container(
       color: Colors.grey,
       margin: EdgeInsets.all(5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image(
-              height: 80,
-              image: AssetImage('assets/banana.jpg')),
+          Image(height: 80, image: AssetImage('assets/banana.jpg')),
           Column(
             children: [
               Text('abanana'),
               Text('R\$ 23,32'),
-
             ],
           ),
           Text('-'),

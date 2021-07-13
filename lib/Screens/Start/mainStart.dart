@@ -15,7 +15,7 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   var selectedScreen = 'inicio';
 
-  void changeScreen(String newScreen){
+  void changeScreen(String newScreen) {
     setState(() {
       selectedScreen = newScreen;
     });

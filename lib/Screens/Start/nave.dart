@@ -7,7 +7,7 @@ class Nave extends StatelessWidget {
 
   Widget naveButton({required String text}) {
     return TextButton(
-      onPressed: text == 'Início' ?()=> changeScreen('inicio') : () {},
+      onPressed: text == 'Início' ? () => changeScreen('inicio') : () {},
       child: Text(
         text,
         style: TextStyle(color: Colors.white),

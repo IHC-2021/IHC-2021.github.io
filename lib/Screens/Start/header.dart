@@ -16,11 +16,11 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Icon(Icons.search),
-          Text(
-          'Pesquisa...',
-          textAlign: TextAlign.start,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.normal, color: Colors.black38)),
+          Text('Pesquisa...',
+              textAlign: TextAlign.start,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                  fontWeight: FontWeight.normal, color: Colors.black38)),
           Container(width: 10),
         ],
       ),
@@ -32,9 +32,7 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Text('São Carlos - SP'),
-          IconButton(onPressed: (){
-
-          }, icon:  Icon(Icons.location_city)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.location_city)),
         ],
       ),
     );
@@ -42,7 +40,7 @@ class Header extends StatelessWidget {
 
   Widget shoppingCart() {
     return TextButton(
-      onPressed: ()=>changeScreen('carrinho'),
+      onPressed: () => changeScreen('carrinho'),
       child: Container(
         child: Row(
           children: [
@@ -59,9 +57,7 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Text('Entrar'),
-          IconButton(onPressed: (){
-
-          }, icon: Icon(Icons.person)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.person)),
         ],
       ),
     );
@@ -71,11 +67,9 @@ class Header extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          IconButton(onPressed: (){
-
-
-
-          }, icon: Icon(Icons.accessibility, color: Colors.blueAccent)),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.accessibility, color: Colors.blueAccent)),
         ],
       ),
     );
