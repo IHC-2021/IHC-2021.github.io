@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key, required this.changeScreen}) : super(key: key);
@@ -34,6 +37,18 @@ class Header extends StatelessWidget {
           Text('São Carlos - SP'),
           IconButton(onPressed: () {}, icon: Icon(Icons.location_city)),
         ],
+    return TextButton(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+        overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      ),
+      onPressed: () => log('location'),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('São Carlos - SP'),
+          Icon(Icons.location_city),
+        ],
       ),
     );
   }
@@ -48,6 +63,18 @@ class Header extends StatelessWidget {
             Icon(Icons.shopping_cart),
           ],
         ),
+    return TextButton(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+        overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      ),
+      onPressed: () => changeScreen('carrinho'),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Carrinho'),
+          Icon(Icons.shopping_cart),
+        ],
       ),
     );
   }
@@ -77,6 +104,23 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        height: 115,
+        constraints: BoxConstraints(maxHeight: 115, maxWidth: 1026),
+        width: 1026,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            logo(),
+            searchbar(),
+            location(),
+            shoppingCart(),
+            login(),
+            accessibility(),
+          ],
+        ),
+      ),
     return Row(
       children: [
         Expanded(child: logo()),
