@@ -7,35 +7,30 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(5.0),
-      alignment: Alignment.bottomCenter,
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: BoxDecoration(color: Colors.black.withOpacity(0.75)),
-      child: Center(
-        child: Container(
-          width: 400,
-          height: 500,
-          padding: const EdgeInsets.all(32.0),
-          decoration: BoxDecoration(color: Colors.white),
-          child: Column(
-            children: [
+        padding: const EdgeInsets.all(5.0),
+        alignment: Alignment.bottomCenter,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(color: Colors.black.withOpacity(0.75)),
+        child: Center(
+          child: Container(
+            width: 400,
+            height: 500,
+            padding: const EdgeInsets.all(32.0),
+            decoration: BoxDecoration(color: Colors.white),
+            child: Column(children: [
               Container(
                 margin: const EdgeInsets.only(bottom: 22, top: 128),
                 child: TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'E-mail'
-                  ),
+                      border: OutlineInputBorder(), hintText: 'E-mail'),
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(bottom: 22),
                 child: TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Senha'
-                  ),
+                      border: OutlineInputBorder(), hintText: 'Senha'),
                 ),
               ),
               Container(
@@ -60,10 +55,8 @@ class Login extends StatelessWidget {
                   child: const Text('Fechar'),
                 ),
               ),
-            ]
+            ]),
           ),
-        ),
-      )
-    );
+        ));
   }
 }
