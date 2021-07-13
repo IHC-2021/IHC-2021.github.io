@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
+  const Header({Key? key, required this.changeScreen}) : super(key: key);
+  final Function changeScreen;
 
   Widget logo() {
     return Image(
@@ -33,14 +34,15 @@ class Header extends StatelessWidget {
   }
 
   Widget shoppingCart() {
-    return Container(
-      child: Row(
-        children: [
-          Text('Carrinho'),
-          IconButton(onPressed: (){
-
-          }, icon: Icon(Icons.shopping_cart)),
-        ],
+    return TextButton(
+      onPressed: changeScreen('carrinho'),
+      child: Container(
+        child: Row(
+          children: [
+            Text('Carrinho'),
+            Icon(Icons.shopping_cart),
+          ],
+        ),
       ),
     );
   }

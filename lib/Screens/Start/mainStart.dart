@@ -15,6 +15,12 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   var selectedScreen = 'inicio';
 
+  void changeScreen(String newScreen){
+    setState(() {
+      selectedScreen = newScreen;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,8 +35,8 @@ class _StartScreenState extends State<StartScreen> {
               ),
               child: Column(
                 children: [
-                  Header(),
-                  Nave(),
+                  Header(changeScreen: changeScreen),
+                  Nave(changeScreen: changeScreen),
                   selectedScreen == 'inicio' ? HomePage() : ShoppingCart(),
                   Footer(),
                 ],
