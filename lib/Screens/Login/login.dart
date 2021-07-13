@@ -51,7 +51,7 @@ class Login extends StatelessWidget {
                     primary: Colors.grey,
                     minimumSize: Size(double.infinity, 60),
                   ),
-                  onPressed: () => changeScreen('inicio'),
+                  onPressed: () => changeScreen('login'),
                   child: const Text('Fechar'),
                 ),
               ),

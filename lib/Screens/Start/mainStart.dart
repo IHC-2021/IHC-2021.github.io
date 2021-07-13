@@ -26,7 +26,9 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: selectedScreen == 'login' ? NeverScrollableScrollPhysics() : AlwaysScrollableScrollPhysics(),
+        physics: selectedScreen == 'login'
+            ? NeverScrollableScrollPhysics()
+            : AlwaysScrollableScrollPhysics(),
         child: Stack(
           children: [
             Container(
@@ -42,15 +44,19 @@ class _StartScreenState extends State<StartScreen> {
                       children: [
                         Header(changeScreen: changeScreen),
                         Nave(changeScreen: changeScreen),
-                        selectedScreen == 'inicio' ? HomePage() : ShoppingCart(),
-                        Footer(), 
+                        selectedScreen == 'inicio'
+                            ? HomePage()
+                            : ShoppingCart(),
+                        Footer(),
                       ],
                     ),
                   ),
                 ),
               ),
             ),
-            selectedScreen == 'login' ? Login(changeScreen: changeScreen) : SizedBox.shrink(),
+            selectedScreen == 'login'
+                ? Login(changeScreen: changeScreen)
+                : SizedBox.shrink(),
           ],
         ),
       ),
