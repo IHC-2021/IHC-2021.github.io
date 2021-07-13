@@ -35,7 +35,7 @@ class Header extends StatelessWidget {
 
   Widget shoppingCart() {
     return TextButton(
-      onPressed: changeScreen('carrinho'),
+      onPressed: ()=>changeScreen('carrinho'),
       child: Container(
         child: Row(
           children: [

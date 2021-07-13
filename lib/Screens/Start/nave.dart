@@ -15,7 +15,7 @@ class Nave extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           TextButton(
-              onPressed: changeScreen('inicio'),
+              onPressed:()=> changeScreen('inicio'),
               child: Text('Início')),
           Text('Categorias'),
           Text('Ofertas'),
