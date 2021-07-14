@@ -3,6 +3,7 @@ import 'package:final_project_uiux/Screens/ShoppingCart/mainShoppingCart.dart';
 import 'package:final_project_uiux/Screens/Start/footer.dart';
 import 'package:final_project_uiux/Screens/Start/header.dart';
 import 'package:final_project_uiux/Screens/Start/nave.dart';
+import 'package:final_project_uiux/Screens/Login/login.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatefulWidget {
@@ -14,10 +15,12 @@ class StartScreen extends StatefulWidget {
 
 class _StartScreenState extends State<StartScreen> {
   var selectedScreen = 'inicio';
+  var showCart = false;
 
   void changeScreen(String newScreen) {
     setState(() {
       selectedScreen = newScreen;
+      if(newScreen == 'login') showCart = !showCart;
     });
   }
 
@@ -25,24 +28,38 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Container(
-              // margin: EdgeInsets.all(40),
-              constraints: BoxConstraints(
-                minWidth: 800,
-                // maxWidth: 1100,
-              ),
-              child: Column(
-                children: [
-                  Header(changeScreen: changeScreen),
-                  Nave(changeScreen: changeScreen),
-                  selectedScreen == 'inicio' ? HomePage() : ShoppingCart(),
-                  Footer(),
-                ],
+        physics: selectedScreen == 'login'
+            ? NeverScrollableScrollPhysics()
+            : AlwaysScrollableScrollPhysics(),
+        child: Stack(
+          children: [
+            Container(
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Container(
+                    margin: EdgeInsets.all(40),
+                    constraints: BoxConstraints(
+                      minWidth: 800,
+                      maxWidth: 1100,
+                    ),
+                    child: Column(
+                      children: [
+                        Header(changeScreen: changeScreen),
+                        Nave(changeScreen: changeScreen),
+                        selectedScreen == 'inicio'
+                            ? HomePage()
+                            : ShoppingCart(),
+                        Footer(),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
+            showCart
+                ? Login(changeScreen: changeScreen)
+                : SizedBox.shrink(),
+          ],
         ),
       ),
     );
