@@ -134,7 +134,6 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 113,
-      width: 1370,
       child: Center(
         child: Container(
           height: 115,
