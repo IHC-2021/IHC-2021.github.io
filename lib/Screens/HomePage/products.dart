@@ -49,25 +49,68 @@ class Products extends StatelessWidget {
     );
   }
 
-  Widget buyProduct(String product) {
+  Widget buyProduct(String product, String label) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.withOpacity(0.10),
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(
+          color: Colors.black,
+          width: 2,
+        ),
+      ),
       child: Column(
         children: [
-          Text(product),
+          Text(
+            product,
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
           Image(
             image: AssetImage('assets/$product.jpg'),
             height: 150,
+            semanticLabel: label,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(onPressed: (){},
-                icon: Icon(Icons.remove_circle_outline)),
+          Text(
+            'R\$ 15.99 / kg',
+            style: TextStyle(fontSize: 17, height: 2),
+          ),
+          Container(
+            constraints: BoxConstraints(maxWidth: 200),
+            decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.10),
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(
+                color: Colors.green,
+                width: 2,
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  color: Colors.green,
+                  icon: Icon(
+                    Icons.add_circle,
+                    semanticLabel: 'Adicionar Produto',
+                    size: 32,
+                  ),
+                ),
                 Text('1'),
-              IconButton(onPressed: (){},
-                  icon: Icon(Icons.add_circle_outline)),
-            ],
-          )
+                IconButton(
+                  color: Colors.green,
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.remove_circle,
+                    semanticLabel: 'Adicionar Produto',
+                    size: 32,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -75,6 +118,14 @@ class Products extends StatelessWidget {
 
   Widget productsGrid() {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.withOpacity(0.10),
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(
+          color: Colors.black,
+          width: 2,
+        ),
+      ),
       padding: const EdgeInsets.all(10.0),
       child: GridView.builder(
         physics: NeverScrollableScrollPhysics(),
@@ -87,7 +138,9 @@ class Products extends StatelessWidget {
         ),
         itemCount: 14,
         itemBuilder: (context, index) {
-          return index % 2 == 0 ? buyProduct('banana') : buyProduct('couve');
+          return index % 2 == 0
+              ? buyProduct('Banana', 'Um Cacho de Bananas')
+              : buyProduct('Couve', 'Duas Folhas de Couve');
         },
       ),
     );
@@ -95,11 +148,16 @@ class Products extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(flex: 3, child: filterBar()),
-        Expanded(flex: 12, child: productsGrid()),
-      ],
+    return Container(
+      constraints: BoxConstraints(maxWidth: 1026),
+      child: Center(
+        child: Row(
+          children: [
+            Expanded(flex: 3, child: filterBar()),
+            Expanded(flex: 12, child: productsGrid()),
+          ],
+        ),
+      ),
     );
   }
 }
