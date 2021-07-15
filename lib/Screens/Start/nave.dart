@@ -7,7 +7,7 @@ class Nave extends StatelessWidget {
 
   Widget naveButton({required String text}) {
     return TextButton(
-      onPressed: text == 'Início' ? () => changeScreen('inicio') : () {},
+      onPressed: text == 'INICIO' ? () => changeScreen('inicio') : () {},
       child: Text(
         text,
         style: TextStyle(
@@ -31,10 +31,10 @@ class Nave extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              naveButton(text: 'Início'),
-              naveButton(text: 'Categorias'),
-              naveButton(text: 'Ofertas'),
-              naveButton(text: 'Novos Produtos'),
+              naveButton(text: 'INICIO'),
+              naveButton(text: 'CATEGORIAS'),
+              naveButton(text: 'OFERTAS'),
+              naveButton(text: 'NOVOS PRODUTOS'),
             ],
           ),
         ),
