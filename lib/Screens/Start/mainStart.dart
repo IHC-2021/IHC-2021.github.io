@@ -35,10 +35,8 @@ class _StartScreenState extends State<StartScreen> {
               child: Center(
                 child: SingleChildScrollView(
                   child: Container(
-                    margin: EdgeInsets.all(40),
                     constraints: BoxConstraints(
                       minWidth: 800,
-                      maxWidth: 1100,
                     ),
                     child: Column(
                       children: [
