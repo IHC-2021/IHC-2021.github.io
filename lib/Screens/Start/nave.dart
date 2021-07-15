@@ -7,7 +7,7 @@ class Nave extends StatelessWidget {
 
   Widget naveButton({required String text}) {
     return TextButton(
-      onPressed: text == 'Início' ? () => changeScreen('inicio') : () {},
+      onPressed: text == 'INICIO' ? () => changeScreen('inicio') : () {},
       child: Text(
         text,
         style: TextStyle(color: Colors.white),
@@ -19,6 +19,22 @@ class Nave extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: hortaGreen,
+      child: Center(
+        child: Container(
+          height: 40,
+          constraints: BoxConstraints(
+            maxWidth: 1026
+            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              naveButton(text: 'INICIO'),
+              naveButton(text: 'CATEGORIAS'),
+              naveButton(text: 'OFERTAS'),
+              naveButton(text: 'NOVOS PRODUTOS'),
+            ],
+          ),
+        ),
       height: 80,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
