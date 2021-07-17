@@ -10,7 +10,10 @@ class Nave extends StatelessWidget {
       onPressed: text == 'INICIO' ? () => changeScreen('inicio') : () {},
       child: Text(
         text,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+        ),
       ),
     );
   }
@@ -35,15 +38,6 @@ class Nave extends StatelessWidget {
             ],
           ),
         ),
-      height: 80,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          naveButton(text: 'Início'),
-          naveButton(text: 'Categorias'),
-          naveButton(text: 'Ofertas'),
-          naveButton(text: 'Novos Produtos'),
-        ],
       ),
     );
   }

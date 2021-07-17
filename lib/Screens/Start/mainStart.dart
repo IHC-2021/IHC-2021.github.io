@@ -15,10 +15,12 @@ class StartScreen extends StatefulWidget {
 
 class _StartScreenState extends State<StartScreen> {
   var selectedScreen = 'inicio';
+  var showCart = false;
 
   void changeScreen(String newScreen) {
     setState(() {
       selectedScreen = newScreen;
+      if(newScreen == 'login') showCart = !showCart;
     });
   }
 
@@ -52,7 +54,7 @@ class _StartScreenState extends State<StartScreen> {
                 ),
               ),
             ),
-            selectedScreen == 'login'
+            showCart
                 ? Login(changeScreen: changeScreen)
                 : SizedBox.shrink(),
           ],
