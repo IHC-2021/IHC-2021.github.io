@@ -1,0 +1,132 @@
+body {
+    overflow-x: hidden;
+}
+
+.logo {
+    width: 106px;
+    height: 65px;
+    background-image: url('../assets/logo.png');
+}
+
+.div-as-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.search-bar .form-control {
+    border-radius: 1.25rem;
+}
+
+.search-bar i {
+    top: 8px;
+    right: 11px;
+    font-size: 1.3rem;
+}
+
+.header-icons span i {
+    font-size: 1.5rem;
+}
+
+.accecibility-icon {
+    color: #0099CC;
+    font-size: 2rem !important;
+    top: 17px;
+}
+
+.categories-bar {
+    background-color: #27AE60;
+}
+
+.categories-bar ul {
+    list-style: none;
+    /* float: left; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+}
+
+.categories-bar ul li {
+    float: left;
+}
+
+.banner { position: relative; overflow: auto; }
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+
+.unslider-nav{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
+.unslider {
+    position: relative;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    font-size: 4rem;
+}
+
+.bread-crumb > div > div {
+    background-color: #D7AF93;
+}
+
+.filter-wrapper h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #8C68BD;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.product-image {
+    height: 120px;
+    width: 100%;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+}
+
+.prod-qtty-handler button {
+    border: none;
+    background-color: #27ae60;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    line-height: 14px;
+    padding-bottom: 6px;
+    color: white;
+    font-size: 28px;
+}
+
+.prod-qtty-handler {
+    border: 1px solid #27ae60;
+    display: flex;
+    border-radius: 24px;
+    padding: 2px;
+    justify-content: space-between;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+.prod-qtty-handler span {
+    color: #27ae60;
+}
+
+.prod-price {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 7px;
+}
