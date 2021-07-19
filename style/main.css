@@ -184,3 +184,9 @@ body {
     width: 32px;
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .product-image {
+        height: 250px;
+    }
+}

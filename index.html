@@ -24,12 +24,12 @@
         <div class="row">
             
             <!-- Logo -->
-            <div class="col-1 offset-2">
+            <div class="col-4 col-md-1 offset-md-2">
                 <div class="logo div-as-image"></div>
             </div>
 
             <!-- Barra de pesquisa -->
-            <div class="col-3 mt-3 search-bar">
+            <div class="col-6 col-md-3 mt-3 search-bar">
                 <form>
                     <div class="form-group position-relative">
                       <input type="text" class="form-control" placeholder="Pesquisar">
@@ -39,7 +39,8 @@
             </div>
 
             <!-- menu do cabeçalho -->
-            <div class="col-4 mt-3 pt-1 text-secondary header-icons">
+            <!-- TODO: adicionar meno colapsável -->
+            <div class="col-4 mt-3 pt-1 text-secondary header-icons d-none d-md-block">
                 <span class="me-4">
                     São Carlos - SP
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -66,7 +67,7 @@
         <div class="row">
             <div class="col-12 categories-bar">
                 <div class="row">
-                    <div class="col-8 offset-2">
+                    <div class="col-12 col-md-8 offset-md-2">
                         <ul class="pt-3">
                             <li>TODOS</li>
                             <li>CATEGORIAS</li>
@@ -91,7 +92,7 @@
         </div>
         
         <!-- Setas do slider -->
-        <div class="arrow-wrapper">
+        <div class="arrow-wrapper d-none d-md-block">
             <a class="unslider-arrow prev text-light"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
             <a class="unslider-arrow next text-light"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
         </div>
@@ -100,7 +101,7 @@
     <!-- breadcrumb -->
     <div class="bread-crumb mt-2">
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-12 col-md-8 offset-md-2">
                 <span>Página Inicial</span>
                 >
                 <span>Produto X</span>
@@ -110,12 +111,13 @@
         </div>
     </div>
 
-    <!-- Filtros -->
     <div class="main-content">
         <div class="row">
-            <div class="col-2 offset-2 filter-wrapper ps-0">
+            <!-- Filtros -->
+            <div class="col-2 offset-2 filter-wrapper ps-0 d-none d-md-block">
 
                 <!-- Filtros parte 1 -->
+                <!-- TODO: adicionar filtro para telar menores -->
                 <h2>Promoções especiais</h2>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -192,11 +194,11 @@
             </div>
 
             <!-- Produtos -->
-            <div class="col-6 p-0">
+            <div class="col-12 col-md-6 p-0">
                 <div class="row p-0">
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Banana pêra</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/banana.jpg');"></div>
@@ -210,7 +212,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Couve</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/couve.jpg');"></div>
@@ -224,7 +226,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Arrôz tropinha</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/arroz.jpeg');"></div>
@@ -238,7 +240,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Limão nanico</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/limao.jpeg');"></div>
@@ -252,7 +254,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Cebola</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/cebola.jpeg');"></div>
@@ -266,7 +268,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Abacaxi</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/abacaxi.jpg');"></div>
@@ -280,7 +282,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Manga Tomy</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/manga.jpg');"></div>
@@ -294,7 +296,7 @@
                     </div>
                     
                     <!-- item -->
-                    <div class="col-3 mb-5 mt-3">
+                    <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
                             <h3 class="text-center fw-normal text-secondary">Abacate</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/abacate.jpg');"></div>
