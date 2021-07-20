@@ -185,6 +185,54 @@ body {
     margin: 0 auto;
 }
 
+.list-icon {
+    font-size: 2rem;
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
+.colapsed-menu ul li {
+    text-align: right;
+}
+
+.category-select {
+    position: relative
+}
+
+.category-select select option {
+    color: black;
+}
+
+.category-select select {
+    background: transparent;
+    border: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+    -moz-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.category-select::after {
+    content: '\f0d7';
+    font-family: FontAwesome;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    pointer-events: none;
+}
+
+.link-style {
+    color: #00BED8;
+}
+
 @media only screen and (max-width: 768px) {
     .product-image {
         height: 250px;

@@ -38,8 +38,28 @@
                 </form>
             </div>
 
+            <!-- Menu para telas menores, não aparece no tamanho desktop -->
+            <div class="col-2 d-block d-md-none mt-3 p-0 text-secondary dropdown colapsed-menu">
+                <button class="btn-no-style" id="menu-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-list-ul list-icon cursor-pointer" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="menu-btn">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Carrinho
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modal-login">
+                            Entrar
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <!-- menu do cabeçalho -->
-            <!-- TODO: adicionar meno colapsável -->
             <div class="col-4 mt-3 pt-1 text-secondary header-icons d-none d-md-block">
                 <span class="me-4">
                     São Carlos - SP
@@ -68,12 +88,24 @@
             <div class="col-12 categories-bar">
                 <div class="row">
                     <div class="col-12 col-md-8 offset-md-2">
-                        <ul class="pt-3">
+
+                        <!-- só aparece em desktop -->
+                        <ul class="pt-3 d-none d-md-flex">
                             <li>TODOS</li>
                             <li>CATEGORIAS</li>
                             <li>OFERTAS</li>
                             <li>PRODUTOS NOVOS</li>
                         </ul>
+
+                        <!-- só aparece em mobile -->
+                        <div class="category-select">
+                            <select class="d-block d-md-none text-white fw-bold">
+                                <option selected>TODOS </option>
+                                <option value="CATEGORIAS">CATEGORIAS</option>
+                                <option value="OFERTAS">OFERTAS</option>
+                                <option value="PRODUTOS NOVOS">PRODUTOS NOVOS</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,6 +139,18 @@
                 <span>Produto X</span>
                 >
                 <span>Cadastro</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtros - Só aparece em mobile -->
+    <div class="filter-mobile">
+        <div class="row">
+            <div class="col-12 d-md-none text-secondary text-end p-2 px-4">
+                <button class="btn-no-style">
+                    Filtros
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </div>
