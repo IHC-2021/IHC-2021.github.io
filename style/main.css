@@ -17,6 +17,7 @@ body {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    text-decoration: none;
 }
 
 .logo {
@@ -248,6 +249,10 @@ footer {
 
 .social-icons-wrapper i {
     font-size: 4rem;
+}
+
+.main-content {
+    min-height: 200px;
 }
 
 @media only screen and (max-width: 768px) {
