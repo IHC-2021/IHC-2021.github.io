@@ -1,6 +1,10 @@
 @font-face { font-family: Ranga; src: url('../assets/fonts/ranga/Ranga-Regular.ttf'); }
 @font-face { font-family: Ranga; font-weight: bold; src: url('../assets/fonts/ranga/Ranga-Bold.ttf'); }
 
+:root {
+    --main-bg-color: #27AE60;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -48,7 +52,7 @@ body {
 }
 
 .categories-bar {
-    background-color: #27AE60;
+    background-color: var(--main-bg-color);
 }
 
 .categories-bar ul {
@@ -113,7 +117,7 @@ body {
 
 .prod-qtty-handler button {
     border: none;
-    background-color: #27ae60;
+    background-color: var(--main-bg-color);
     border-radius: 50px;
     height: 25px;
     width: 25px;
@@ -125,7 +129,7 @@ body {
 }
 
 .prod-qtty-handler {
-    border: 1px solid #27ae60;
+    border: 1px solid var(--main-bg-color);
     display: flex;
     border-radius: 24px;
     padding: 2px;
@@ -135,7 +139,7 @@ body {
 }
 
 .prod-qtty-handler span {
-    color: #27ae60;
+    color: var(--main-bg-color);
 }
 
 .prod-price {
@@ -166,7 +170,7 @@ body {
 }
 
 .login-form-wrapper .submit-button {
-    background-color: #27ae60;
+    background-color: var(--main-bg-color);
 }
 
 .login-form-wrapper .fb-button {
@@ -232,6 +236,18 @@ body {
 
 .link-style {
     color: #00BED8;
+}
+
+footer {
+    background-color: var(--main-bg-color);
+}
+
+.band-img-wrapper img {
+    width: 56px;
+}
+
+.social-icons-wrapper i {
+    font-size: 4rem;
 }
 
 @media only screen and (max-width: 768px) {
