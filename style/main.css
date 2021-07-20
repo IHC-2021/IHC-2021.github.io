@@ -254,4 +254,10 @@ footer {
     .product-image {
         height: 250px;
     }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
