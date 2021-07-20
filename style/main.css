@@ -90,7 +90,8 @@ body {
     background-color: #D7AF93;
 }
 
-.filter-wrapper h2 {
+.filter-wrapper h2,
+.filter-mobile h2 {
     font-size: 1rem;
     text-transform: uppercase;
     background-color: #8C68BD;
