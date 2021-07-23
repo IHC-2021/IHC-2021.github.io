@@ -129,6 +129,16 @@ body {
     font-size: 28px;
 }
 
+.prod-add-cart button {
+    border: 1;
+    background-color: #8c68bd;
+    width: 225px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: FontAwesome;
+    color: #fff;
+}
+
 .prod-qtty-handler {
     border: 1px solid var(--main-bg-color);
     display: flex;
