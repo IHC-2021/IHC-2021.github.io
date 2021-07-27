@@ -95,6 +95,10 @@ body {
     background-color: #D7AF93;
 }
 
+.item-visualisation{
+    background-color: #D3D3D3;
+}
+
 .filter-wrapper h2,
 .filter-mobile h2 {
     font-size: 1rem;
@@ -110,6 +114,10 @@ body {
 .product-image {
     height: 120px;
     width: 100%;
+}
+
+.item-image{
+    height: 2px;
 }
 
 .product h3 {
