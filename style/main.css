@@ -324,3 +324,17 @@ main a {
 .btn-primary:hover {
   background-color: #8C68BD;
 }
+
+.cart-item-img {
+    width: 70px;
+    height: 70px;
+}
+
+.custom-alert {
+    bottom: 25px;
+    right: 30px;
+    display: none;
+}
+.custom-alert .alert-message {
+    min-width: 250px;
+}
