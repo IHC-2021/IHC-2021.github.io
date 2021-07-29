@@ -1,0 +1,20 @@
+.purple-wrapper form {
+    width: 80%;
+    height: 80%;
+}
+
+.purple-wrapper form div {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.purple-wrapper form div label {
+    font-size: 1.12rem;
+    line-height: 2rem;
+}
+
+.fa {
+    font-size: 2.2rem;
+}
+
+

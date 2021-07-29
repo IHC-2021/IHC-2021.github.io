@@ -314,3 +314,11 @@ footer {
 main a {
     text-decoration: none;
 }
+
+.btn-primary {
+    background-color: #8C68BD;
+}
+
+.btn-primary:hover {
+    background-color: #8C68BD;
+}
