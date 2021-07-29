@@ -24,7 +24,7 @@
         <div class="row">
             
             <!-- Logo -->
-            <div class="col-4 col-md-1 offset-md-2">
+            <div class="col-4 col-md-1 offset-md-2" >
                 <div class="logo div-as-image m-1 m-md-0"></div>
             </div>
 
@@ -32,7 +32,7 @@
             <div class="col-6 col-md-3 mt-3 search-bar">
                 <form>
                     <div class="form-group position-relative">
-                      <input type="text" class="form-control" placeholder="Pesquisar">
+                      <input type="text" class="form-control" placeholder="Pesquisar...">
                       <i class="fa fa-search position-absolute text-secondary" aria-hidden="true"></i>
                     </div>
                 </form>
@@ -66,61 +66,62 @@
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </span>
 
-                <a class="me-4 btn-no-style" href="/carrinho.html">
+                <a class="me-4 btn-no-style" title="Acesse seu Carrinho" href="carrinho.html">
                     Carrinho
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
 
-                <button class="me-5 btn-no-style" data-bs-toggle="modal" data-bs-target="#modal-login">
+                <button class="me-5 btn-no-style" title="Acesse ou crie uma Conta" data-bs-toggle="modal" data-bs-target="#modal-login">
                     Entrar
                     <i class="fa fa-user-o" aria-hidden="true"></i>
                 </button>
 
                 <!-- TODO: colocar botão de acessibilidade em mobile -->
-                <button class="btn-no-style">
+                <button class="btn-no-style" title="Acessibilidade">
                     <i class="fa fa-universal-access accecibility-icon position-absolute" aria-hidden="true"></i>
                 </button>
 
             </div>
         </div>
 
-        <!-- barra verde -->
-        <div class="row">
-            <div class="col-12 categories-bar">
-                <div class="row">
-                    <div class="col-12 col-md-8 offset-md-2">
+    </header>
 
-                        <!-- só aparece em desktop -->
-                        <ul class="pt-3 d-none d-md-flex">
-                            <li>TODOS</li>
-                            <li>CATEGORIAS</li>
-                            <li>OFERTAS</li>
-                            <li>PRODUTOS NOVOS</li>
-                        </ul>
+    <!-- barra de navegação-->
+    <nav class="row">
+        <div class="col-12 categories-bar">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
 
-                        <!-- só aparece em mobile -->
-                        <div class="category-select">
-                            <select class="d-block d-md-none text-white fw-bold">
-                                <option selected>TODOS </option>
-                                <option value="CATEGORIAS">CATEGORIAS</option>
-                                <option value="OFERTAS">OFERTAS</option>
-                                <option value="PRODUTOS NOVOS">PRODUTOS NOVOS</option>
-                            </select>
-                        </div>
+                    <!-- só aparece em desktop -->
+                    <ul class="pt-3 d-none d-md-flex">
+                        <a href="index.html"><li>TODOS</li></a>
+                        <a href="index.html"><li>CATEGORIAS</li></a>
+                        <a href="index.html"><li>OFERTAS</li></a>
+                        <a href="index.html"><li>PRODUTOS NOVOS</li></a>
+                    </ul>
+
+                    <!-- só aparece em mobile -->
+                    <div class="category-select">
+                        <select class="d-block d-md-none text-white fw-bold">
+                            <a href="index.html"><option selected>TODOS </option></a>
+                            <a href="index.html"><option value="CATEGORIAS">CATEGORIAS</option></a>
+                            <a href="index.html"><option value="OFERTAS">OFERTAS</option></a>
+                            <a href="index.html"><option value="PRODUTOS NOVOS">PRODUTOS NOVOS</option></a>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Slider -->
-    <div class="position-relative">
+    <div class="position-relative" role="slider">
         <!-- imagens do slider -->
         <div class="banner">
             <ul>
-                <li><img class="d-block w-100" src="assets/Banner1.1.jpg" alt="image placehoder"></li>
-                <li><img class="d-block w-100" src="assets/banner2.jpg" alt="image placehoder"></li>
-                <li><img class="d-block w-100" src="assets/banner3.jpg" alt="image placehoder"></li>
+                <li><img class="d-block w-100" src="assets/Banner1.1.jpg" alt="Bem vindo escrito e atrás cestas de frutas em um feira, em ordem: cesta de tomate, cesta de aspargo, cesta de pimentão vemelhor, cesta de pimentão verde, mamão, ameixa, pera, uva verde, uva roxa"></li>
+                <li><img class="d-block w-100" src="assets/banner2.jpg" alt="Várias frutas em uma mesa, em ordem: rabanete, beringela, abobora, brocolis, pepino, alho poró, tomate, batata, beringela, cogumelo, cenoura, maçã"></li>
+                <li><img class="d-block w-100" src="assets/banner3.jpg" alt="Várias frutas em caixas em uma feira, em ordem: ervilha, cebolinha, gengibre, pimenta verde e vermelha, aspargo e coco"></li>
             </ul>
         </div>
         
@@ -131,7 +132,7 @@
         </div>
     </div>
     <!-- breadcrumb -->
-    <div class="bread-crumb mt-2">
+    <div class="bread-crumb mt-2" >
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
                 <span>Página Inicial</span>
@@ -150,13 +151,13 @@
             <li>
                 <h2>Promoções especiais</h2>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" alt="ofertas do dia" value="" id="defaultCheck1" role="checkbox">
                     <label class="form-check-label" for="defaultCheck1">
                       Ofertas do dia
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <input class="form-check-input" type="checkbox" alt="feira da semana" value="" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
                       Feira da semana
                     </label>
@@ -165,31 +166,31 @@
             <li>
                 <h2>Categorias</h2>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    <input class="form-check-input" type="checkbox" alt="frutas" value="" id="defaultCheck3">
                     <label class="form-check-label" for="defaultCheck3">
                       Frutas
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    <input class="form-check-input" type="checkbox" alt="hortaliças e verduras" value="" id="defaultCheck4">
                     <label class="form-check-label" for="defaultCheck4">
                       Hortaliças e verduras
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                    <input class="form-check-input" type="checkbox" alt="grãos" value="" id="defaultCheck5">
                     <label class="form-check-label" for="defaultCheck5">
                       Grãos
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                    <input class="form-check-input" type="checkbox" alt="óleos e azeites" value="" id="defaultCheck6">
                     <label class="form-check-label" for="defaultCheck6">
                       Óleos e azeites
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                    <input class="form-check-input" type="checkbox" alt="geléias" value="" id="defaultCheck7">
                     <label class="form-check-label" for="defaultCheck7">
                       Geléias
                     </label>
@@ -198,25 +199,25 @@
             <li>
                 <h2>Preços</h2>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                    <input class="form-check-input" type="checkbox" alt="até cinco reais" value="" id="defaultCheck8">
                     <label class="form-check-label" for="defaultCheck8">
                       Até R$5,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+                    <input class="form-check-input" type="checkbox" alt="até dez reais" value="" id="defaultCheck9">
                     <label class="form-check-label" for="defaultCheck9">
                       Até R$10,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                    <input class="form-check-input" type="checkbox" alt="até quinze reais" value="" id="defaultCheck10">
                     <label class="form-check-label" for="defaultCheck10">
                       Até R$15,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+                    <input class="form-check-input" type="checkbox" alt="acima de 15 reais" value="" id="defaultCheck11">
                     <label class="form-check-label" for="defaultCheck11">
                       Acima de R$15,00
                     </label>
@@ -225,86 +226,92 @@
         </ul>
     </div>
 
-    <div class="main-content">
+    <main class="main-content" id="main-content">
         <div class="row">
             <!-- Filtros -->
-            <div class="col-2 offset-2 filter-wrapper ps-0 d-none d-md-block">
+            <aside class="col-2 offset-2 filter-wrapper ps-0 d-none d-md-block">
 
                 <!-- Filtros parte 1 -->
-                <h2>Promoções especiais</h2>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <a href="#main-content">
+                    <h2>Promoções especiais</h2>
+                </a>
+                <div class="form-check" >
+                    <input class="form-check-input" type="checkbox" value="" name="defaultCheck1" aria-label="ofertas do dia">
                     <label class="form-check-label" for="defaultCheck1">
                       Ofertas do dia
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" aria-label="feira da semana">
                     <label class="form-check-label" for="defaultCheck2">
                       Feira da semana
                     </label>
                 </div>
 
                 <!-- Filtros parte 2 -->
-                <h2>Categorias</h2>
+                <a href="#main-content">
+                    <h2>Categorias</h2>
+                </a>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" aria-label="frutas">
                     <label class="form-check-label" for="defaultCheck3">
                       Frutas
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" aria-label="hortaliças e verduras">
                     <label class="form-check-label" for="defaultCheck4">
                       Hortaliças e verduras
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" aria-label="grãos">
                     <label class="form-check-label" for="defaultCheck5">
                       Grãos
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6" aria-label="óleos e azeites">
                     <label class="form-check-label" for="defaultCheck6">
                       Óleos e azeites
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7" aria-label="geléias">
                     <label class="form-check-label" for="defaultCheck7">
                       Geléias
                     </label>
                 </div>
 
                 <!-- Filtros parte 3 -->
-                <h2>Preços</h2>
+                <a href="#main-content">
+                    <h2>Preços</h2>
+                </a>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8" aria-label="até cinco reais">
                     <label class="form-check-label" for="defaultCheck8">
                       Até R$5,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9" aria-label="até dez reais">
                     <label class="form-check-label" for="defaultCheck9">
                       Até R$10,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10" aria-label="até quinze reais">
                     <label class="form-check-label" for="defaultCheck10">
                       Até R$15,00
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck11"  aria-label="acima para quinze reais">
                     <label class="form-check-label" for="defaultCheck11">
                       Acima de R$15,00
                     </label>
                 </div>
-            </div>
+            </aside>
 
             <!-- Produtos -->
             <div class="col-12 col-md-6 p-0">
@@ -320,6 +327,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$1,42/kg</span>
                         </div>
                     </div>
@@ -334,6 +344,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$1,90/un</span>
                         </div>
                     </div>
@@ -341,12 +354,15 @@
                     <!-- item -->
                     <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
-                            <h3 class="text-center fw-normal text-secondary">Arrôz tropinha</h3>
+                            <h3 class="text-center fw-normal text-secondary">Arroz tropinha</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/arroz.jpeg');"></div>
                             <div class="prod-qtty-handler">
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$4,30/kg</span>
                         </div>
@@ -362,6 +378,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$2,10/kg</span>
                         </div>
                     </div>
@@ -375,6 +394,9 @@
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$0,79/kg</span>
                         </div>
@@ -390,6 +412,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$3,15/kg</span>
                         </div>
                     </div>
@@ -403,6 +428,9 @@
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$3,49/kg</span>
                         </div>
@@ -418,13 +446,16 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$2,79/kg</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Rodapé -->
     <footer class="pb-5 pt-3 mt-5 px-md-0 px-3">
@@ -434,12 +465,12 @@
                     <div class="col-12 col-md-3 footer-column mt-4 mt-md-0">
                         <h3>Formas de Pagamento</h3>
                         <div class="band-img-wrapper">
-                            <img src="assets/band-1.jpeg" alt="">
-                            <img src="assets/band-2.png" alt="">
-                            <img src="assets/band-3.jpeg" alt=""><br>
-                            <img src="assets/band-4.jpeg" alt="">
-                            <img src="assets/band-5.png" alt="">
-                            <img src="assets/band-6.png" alt="">
+                            <img src="assets/band-1.jpeg" alt="logo da visa">
+                            <img src="assets/band-2.png" alt="logo da mastercard">
+                            <img src="assets/band-3.jpeg" alt="código de barras com boleto escrito em baixo"><br>
+                            <img src="assets/band-4.jpeg" alt="logo da empresa sicred">
+                            <img src="assets/band-5.png" alt="logo da empresa hipercard">
+                            <img src="assets/band-6.png" alt="logo da empresa elo">
                         </div>
                     </div>
                     <div class="col-12 col-md-3 footer-column mt-4 mt-md-0">
