@@ -32,7 +32,7 @@
             <div class="col-6 col-md-3 mt-3 search-bar">
                 <form>
                     <div class="form-group position-relative">
-                      <input type="text" class="form-control" placeholder="Pesquisar">
+                      <input type="text" class="form-control" placeholder="Pesquisar...">
                       <i class="fa fa-search position-absolute text-secondary" aria-hidden="true"></i>
                     </div>
                 </form>
@@ -45,7 +45,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="menu-btn">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="/carrinho.html">
                             Carrinho
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         </a>
@@ -66,18 +66,18 @@
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </span>
 
-                <button class="me-4 btn-no-style">
+                <a class="me-4 btn-no-style" title="Acesse seu Carrinho" href="carrinho.html">
                     Carrinho
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </button>
+                </a>
 
-                <button class="me-5 btn-no-style" data-bs-toggle="modal" data-bs-target="#modal-login">
+                <button class="me-5 btn-no-style" title="Acesse ou crie uma Conta" data-bs-toggle="modal" data-bs-target="#modal-login">
                     Entrar
                     <i class="fa fa-user-o" aria-hidden="true"></i>
                 </button>
 
                 <!-- TODO: colocar botão de acessibilidade em mobile -->
-                <button class="btn-no-style">
+                <button class="btn-no-style" title="Acessibilidade">
                     <i class="fa fa-universal-access accecibility-icon position-absolute" aria-hidden="true"></i>
                 </button>
 
@@ -119,9 +119,9 @@
         <!-- imagens do slider -->
         <div class="banner">
             <ul>
-                <li><img class="d-block w-100" src="assets/Banner1.1.jpg" alt="bem vindo escrito e atrás cestas de frutas em um feira, em ordem: cesta de tomate, cesta de aspargo, cesta de pimentão vemelhor, cesta de pimentão verde, mamão, ameixa, pera, uva verde, uva roxa"></li>
-                <li><img class="d-block w-100" src="assets/banner2.jpg" alt="várias frutas em uma mesa, em ordem: rabanete, beringela, abobora, brocolis, pepino, alho poró, tomate, batata, beringela, cogumelo, cenoura, maçã"></li>
-                <li><img class="d-block w-100" src="assets/banner3.jpg" alt="várias frutas em caixas em uma feira, em ordem: ervilha, cebolinha, gengibre, pimenta verde e vermelha, aspargo e coco"></li>
+                <li><img class="d-block w-100" src="assets/Banner1.1.jpg" alt="Bem vindo escrito e atrás cestas de frutas em um feira, em ordem: cesta de tomate, cesta de aspargo, cesta de pimentão vemelhor, cesta de pimentão verde, mamão, ameixa, pera, uva verde, uva roxa"></li>
+                <li><img class="d-block w-100" src="assets/banner2.jpg" alt="Várias frutas em uma mesa, em ordem: rabanete, beringela, abobora, brocolis, pepino, alho poró, tomate, batata, beringela, cogumelo, cenoura, maçã"></li>
+                <li><img class="d-block w-100" src="assets/banner3.jpg" alt="Várias frutas em caixas em uma feira, em ordem: ervilha, cebolinha, gengibre, pimenta verde e vermelha, aspargo e coco"></li>
             </ul>
         </div>
         
@@ -131,16 +131,12 @@
             <a class="unslider-arrow next text-light"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
         </div>
     </div>
-
     <!-- breadcrumb -->
     <div class="bread-crumb mt-2" >
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
                 <span>Página Inicial</span>
                 >
-                <span>Produto X</span>
-                >
-                <span>Cadastro</span>
             </div>
         </div>
     </div>
@@ -331,6 +327,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$1,42/kg</span>
                         </div>
                     </div>
@@ -345,6 +344,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$1,90/un</span>
                         </div>
                     </div>
@@ -352,12 +354,15 @@
                     <!-- item -->
                     <div class="col-12 col-md-3 mb-5 mt-3">
                         <div class="product">
-                            <h3 class="text-center fw-normal text-secondary">Arrôz tropinha</h3>
+                            <h3 class="text-center fw-normal text-secondary">Arroz tropinha</h3>
                             <div class="product-image div-as-image" style="background-image: url('assets/arroz.jpeg');"></div>
                             <div class="prod-qtty-handler">
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$4,30/kg</span>
                         </div>
@@ -373,6 +378,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$2,10/kg</span>
                         </div>
                     </div>
@@ -386,6 +394,9 @@
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$0,79/kg</span>
                         </div>
@@ -401,6 +412,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$3,15/kg</span>
                         </div>
                     </div>
@@ -415,6 +429,9 @@
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
                             </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
+                            </div>
                             <span class="prod-price">R$3,49/kg</span>
                         </div>
                     </div>
@@ -428,6 +445,9 @@
                                 <button class="decrement-btn">-</button>
                                 <span>1</span>
                                 <button class="increment-btn">+</button>
+                            </div>
+                            <div class="prod-add-cart">
+                                <button>ADICIONAR AO CARRINHO</button>
                             </div>
                             <span class="prod-price">R$2,79/kg</span>
                         </div>

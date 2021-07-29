@@ -17,6 +17,7 @@ body {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    text-decoration: none;
 }
 
 .logo {
@@ -99,6 +100,10 @@ body {
     background-color: #D7AF93;
 }
 
+.item-visualisation{
+    background-color: #D3D3D3;
+}
+
 .filter-wrapper h2,
 .filter-mobile h2 {
     font-size: 1rem;
@@ -116,6 +121,10 @@ body {
     width: 100%;
 }
 
+.item-image{
+    height: 2px;
+}
+
 .product h3 {
     font-size: 1.5rem;
 }
@@ -131,6 +140,16 @@ body {
     padding-bottom: 6px;
     color: white;
     font-size: 28px;
+}
+
+.prod-add-cart button {
+    border: 1;
+    background-color: #8c68bd;
+    width: 225px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: FontAwesome;
+    color: #fff;
 }
 
 .prod-qtty-handler {
@@ -253,6 +272,10 @@ footer {
 
 .social-icons-wrapper i {
     font-size: 4rem;
+}
+
+.main-content {
+    min-height: 200px;
 }
 
 @media only screen and (max-width: 768px) {
