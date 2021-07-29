@@ -162,13 +162,13 @@ body {
   font-size: 28px;
 }
 
-.prod-add-cart button {
-  border: 1;
+.prod-add-cart a {
+  border: solid 2;
   background-color: #8c68bd;
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 15px;
-  font-family: FontAwesome;
   color: #fff;
+  border-color: #000;
 }
 
 .prod-qtty-handler {
@@ -269,7 +269,7 @@ body {
 
 .category-select::after {
   content: "\f0d7";
-  font-family: FontAwesome;
+  /*font-family: FontAwesome;*/
   color: #fff;
   display: inline-block;
   position: absolute;

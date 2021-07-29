@@ -77,6 +77,7 @@
                     São Carlos - SP
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </a>
+
                 <button class="me-4 btn-no-style">
                     Carrinho
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -147,9 +148,7 @@
             <div class="col-12 col-md-8 offset-md-2">
                 <span>Página Inicial</span>
                 >
-                <span>Carrinho</span>
-                >
-                <span>Pagamento</span>
+                <span>Cadastro</span>
             </div>
         </div>
     </div>
@@ -157,53 +156,48 @@
     <div class="main-content">
         <div class="purple-div col-12 col-md-8 offset-md-2">
             <div class="purple-h1">
-                <h1>Pagamento</h1>
+                <h1>Localização</h1>
             </div>
             <div class="purple-wrapper">
                 <form class="container-fluid d-flex flex-column">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Nome no Cartão" class="form-control">
-                    </div>
                     <div class="form-group row">
-                        <div class="col-sm-11">
-                            <input type="number" name="cpf" placeholder="CPF" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-html="true"
-                                title="Apenas números">
-                            </i>
-                        </div>
+                          <div class="col-sm-11">
+                              <input type="number" name="cep" placeholder="CEP" class="form-control">
+                          </div>
+                          <div class="col-md-1">
+                              <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-html="true"
+                                  title="Apenas números">
+                                  </i>
+                          </div>
                     </div>
                     <div class="form-group">
-                        <select id="bandeiras" class="form-control">
-                            <option>Mastercard</option>
-                            <option>Visa</option>
-                            <option>Hipercard</option>
-                            <option>Elo</option>
-                        </select>
+                            <select id="Estados" placeholder="Selecione o Estado" class="form-control">
+                                <option>SP</option>
+                                <option>RJ</option>
+                                <option>ES</option>
+                                <option>MG</option>
+                            </select>
                     </div>
-                    <div class="form-group row">
-                        <label for="validade" class="col-sm-3 col-form-label">
-                            Data de Validade:
-                        </label>
-                        <div class="col-sm-9">
-                            <input id="validade" type="month" name="month" class="form-control">
+                        <div class="form-group">
+                            <input type="text" name="cidade" placeholder="Cidade" class="form-control">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="numero" placeholder="Número do Cartão" class="form-control">
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-11">
-                            <input type="number" name="cvv" placeholder="CVV" class="form-control">
+                        <div class="form-group">
+                            <input type="text" name="rua" placeholder="Rua" class="form-control">
                         </div>
-                        <div class="col-md-1">
-                            <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-html="true"
-                                title="O número atrás do cartão. Apenas números">
-                                </i>
+                        <div class="form-group">
+                            <input type="text" name="numero" placeholder="Número" class="form-control">
                         </div>
-                    </div>
-                    <input type="submit" value="Realizar Pagamento" class="btn btn-primary">
+                          <div class="form-group row">
+                            <div class="col-sm-11">
+                                <input type="text" name="complemento" placeholder="Complemento" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-html="true"
+                                    title="Apenas se necessário (Ex.: Boloco ou Nº do Apartamento)">
+                                    </i>
+                            </div>
+                          </div>
+                    <input type="submit" value="Definir Localização" class="btn btn-primary">
                 </form>
             </div>
         </div>

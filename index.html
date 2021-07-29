@@ -60,15 +60,21 @@
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                         </a>
                     </li>
+                    <li>
+                        <a class="btn-no-style" title="Acessibilidade" data-bs-toggle="modal" data-bs-target="#modal-acessibilidade">
+                            Acessibilidade
+                            <i class="fa fa-universal-access accecibility-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <!-- menu do cabeçalho -->
             <div class="col-4 mt-3 pt-1 text-secondary header-icons d-none d-md-block">
-                <span class="me-4">
+                <a class="me-4 btn-no-style" title="Trocar Localização" href="localizacao.html">
                     São Carlos - SP
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                </span>
+                </a>
 
                 <a class="me-4 btn-no-style" title="Acesse seu Carrinho" href="carrinho.html">
                     Carrinho
@@ -82,8 +88,8 @@
                 </button>
 
                 <!-- TODO: colocar botão de acessibilidade em mobile -->
-                <button class="btn-no-style" title="Acessibilidade">
-                    <i class="fa fa-universal-access accecibility-icon position-absolute" aria-hidden="true"></i>
+                <button class="btn-no-style" title="Acessibilidade" data-bs-toggle="modal" data-bs-target="#modal-acessibilidade">
+                    <i class="fa fa-universal-access accecibility-icon" aria-hidden="true"></i>
                 </button>
 
             </div>
@@ -381,7 +387,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$1,42/kg</span>
                         </div>
@@ -399,7 +407,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$1,90/un</span>
                         </div>
@@ -417,7 +427,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$4,30/kg</span>
                         </div>
@@ -435,7 +447,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$2,10/kg</span>
                         </div>
@@ -453,7 +467,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$0,79/kg</span>
                         </div>
@@ -471,7 +487,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$3,15/kg</span>
                         </div>
@@ -489,7 +507,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$3,49/kg</span>
                         </div>
@@ -507,7 +527,9 @@
                                 <button class="increment-btn">+</button>
                             </div>
                             <div class="prod-add-cart">
-                                <button>Adicionar ao carrinho</button>
+                                <center>
+                                    <a href="carrinho.html">Adicionar ao carrinho</a>
+                                </center>
                             </div>
                             <span class="prod-price">R$2,79/kg</span>
                         </div>
@@ -599,6 +621,43 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary fb-button">Entrar com o Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Acessibilidade -->
+    <div class="modal fade" id="modal-acessibilidade" tabindex="-1" aria-labelledby="modal-acessibility-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-secondary" id="modal-acessibility-label">Acessibilidade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="login-modal-logo d-flex justify-content-center">
+                        <img src="assets/amendoim.png" alt="">
+                        <h6 class="text-secondary">Horta&Fruta</h6>
+                    </div>
+                </div>
+
+                <div class="login-form-wrapper text-secondary d-flex justify-content-center mb-5">
+                    <div>
+                        <form>
+
+                            <div class="mb-3">
+                                <input type="number" class="form-control" placeholder="Tamanho da Fonte">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="number" class="form-control" placeholder="Contraste da Tela">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-button">Acionar Texto Falado</button>
+
+                        </form>
                     </div>
                 </div>
             </div>
