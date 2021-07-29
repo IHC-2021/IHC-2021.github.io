@@ -17,6 +17,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/acompanhamento.css">
     <title>Horta&Fruta</title>
 </head>
@@ -26,7 +27,6 @@
     <!-- cabeçalho -->
     <header>
         <div class="row">
-
             <!-- Logo -->
             <div class="col-4 col-md-1 offset-md-2">
                 <a href="index.html">
@@ -51,7 +51,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="menu-btn">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="carrinho.html">
                             Carrinho
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         </a>
@@ -90,59 +90,51 @@
 
             </div>
         </div>
-    </header>
 
-    <!-- barra de navegação-->
-    <nav class="row">
-        <div class="col-12 categories-bar">
-            <div class="row">
-                <div class="col-12 col-md-8 offset-md-2">
+        <!-- barra verde -->
+        <div class="row">
+            <div class="col-12 categories-bar">
+                <div class="row">
+                    <div class="col-12 col-md-8 offset-md-2">
 
-                    <!-- só aparece em desktop -->
-                    <ul class="pt-3 d-none d-md-flex">
-                        <li>
-                            <a href="index.html">
-                                INÍCIO
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                CATEGORIAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                OFERTAS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                PRODUTOS NOVOS
-                            </a>
-                        </li>
-                    </ul>
+                        <!-- só aparece em desktop -->
+                        <ul class="pt-3 d-none d-md-flex">
+                            <li>
+                                <a href="index.html">
+                                    INÍCIO
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    CATEGORIAS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    OFERTAS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    PRODUTOS NOVOS
+                                </a>
+                            </li>
+                        </ul>
 
-                    <!-- só aparece em mobile -->
-                    <div class="category-select">
-                        <select class="d-block d-md-none text-white fw-bold">
-                            <option selected>
-                                INÍCIO
-                            </option>
-                            <option value="CATEGORIA">
-                                CATEGORIA
-                            </option>
-                            <option value="OFERTAS">
-                                OFERTAS
-                            </option>
-                            <option value="PRODUTOS NOVOS">
-                                PRODUTOS NOVOS
-                            </option>
-                        </select>
+                        <!-- só aparece em mobile -->
+                        <div class="category-select">
+                            <select class="d-block d-md-none text-white fw-bold">
+                                <option selected>INÍCIO </option>
+                                <option value="CATEGORIAS">CATEGORIAS</option>
+                                <option value="OFERTAS">OFERTAS</option>
+                                <option value="PRODUTOS NOVOS">PRODUTOS NOVOS</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- breadcrumb -->
     <div class="bread-crumb mt-2">
@@ -150,33 +142,31 @@
             <div class="col-12 col-md-8 offset-md-2">
                 <span>Página Inicial</span>
                 >
-                <span>Banana</span>
-                >
-                <span>Carrinho</span>
+                <span>Cadastro</span>
             </div>
         </div>
     </div>
 
     <div class="main-content">
-        <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <h1>Carrinho</h1>
-                <!-- TODO: implementar conteúdo aqui -->
-                <div class="item-visualisation">
-                    <div>
-                        <h3>Banana Pera</h3>
-                        <div class="prod-qtty-handler">
-                            <button class="decrement-btn">-</button>
-                            <span>1</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                        <span class="prod-price">
-                            <h4>R$1,42/kg</h4>
-                        </span>
+        <div class="purple-div col-12 col-md-8 offset-md-2">
+            <div class="purple-h1">
+                <h1>Cadastro</h1>
+            </div>
+            <div class="purple-wrapper">
+                <form class="container-fluid d-flex flex-column">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nome" class="form-control">
                     </div>
-                    <!-- TODO: implementar imagem banana logo abaixo do escrito aqui -->
-                    <div><img src="banana.jpg" alt="Banana"></img></div>
-                </div>
+                    <div class="form-group">
+                        <input type="text" name="id" placeholder="E-mail ou Telefone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="password" placeholder="Senha" class="form-control">
+                    </div>
+                    <input type="submit" value="Cadastrar" class="btn btn-primary">
+                    <span><center><h4>-------------------- OU --------------------</h4></center></span>
+                    <input type="submit" value="Cadastrar com Facebook" class="btn btn-fb">
+                </form>
             </div>
         </div>
     </div>
