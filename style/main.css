@@ -298,6 +298,15 @@ footer {
   min-height: 200px;
 }
 
+.prod-add-cart button {
+    border: 1;
+    background-color: #8c68bd;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .product-image {
     height: 250px;
@@ -307,6 +316,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .prod-add-cart button {
+    width: 80%;
   }
 }
 
@@ -339,11 +352,3 @@ main a {
 .custom-alert .alert-message {
     min-width: 250px;
 }
-
-.prod-add-cart button {
-    border: 1;
-    background-color: #8c68bd;
-    border-radius: 12px;
-    font-size: 15px;
-    color: #fff;
-  }
