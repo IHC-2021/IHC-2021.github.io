@@ -6,7 +6,7 @@ const productTemplate = `
     <div class="col-3 col-md-4">
         <h4 class="product-name"><strong>{{productName}}</strong></h4><h4>
     </div>
-    <div class="col-2">
+    <div class="col-4 col-md-2">
         <div class="text-center cart-price">
             <h6><strong>{{productPrice}}</strong></h6>
         </div>
