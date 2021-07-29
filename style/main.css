@@ -339,3 +339,11 @@ main a {
 .custom-alert .alert-message {
     min-width: 250px;
 }
+
+.prod-add-cart button {
+    border: 1;
+    background-color: #8c68bd;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #fff;
+  }
