@@ -1,9 +1,9 @@
 const productTemplate = `
 <div class="row">
-    <div class="col-2">
+    <div class="col-3 col-md-2">
         <div class="cart-item-img div-as-image" style="background-image: url('{{productImage}}');"></div> 
     </div>
-    <div class="col-4">
+    <div class="col-3 col-md-4">
         <h4 class="product-name"><strong>{{productName}}</strong></h4><h4>
     </div>
     <div class="col-2">
@@ -137,7 +137,7 @@ $(function() {
     const multPrice = (priceStr, qtty) => {
         const priceNum = Number(priceStr.replace(/[^0-9]/g, ''));
         const qttyNum = Number(qtty);
-        return 'R$ ' + ((priceNum * qttyNum / 100).toString().replace('.', ','));
+        return 'R$ ' + ((priceNum * qttyNum / 100).toFixed(2).toString().replace('.', ','));
     }
 
     const getProduct = productName => {
