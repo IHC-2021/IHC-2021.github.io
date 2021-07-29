@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- vendors style -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/84448e50b6.js"></script>
     <link rel="stylesheet" href="vendors/unslider/dist/css/unslider.css">
     <link rel="stylesheet" href="vendors/unslider/dist/css/unslider-dots.css">
@@ -18,23 +20,25 @@
     <link rel="stylesheet" href="style/acompanhamento.css">
     <title>Horta&Fruta</title>
 </head>
+
 <body>
-    
+
     <!-- cabeçalho -->
     <header>
         <div class="row">
-            
             <!-- Logo -->
             <div class="col-4 col-md-1 offset-md-2">
-                <a href="index.html"><div class="logo div-as-image m-1 m-md-0"></div></a>
+                <a href="index.html">
+                    <div class="logo div-as-image m-1 m-md-0"></div>
+                </a>
             </div>
 
             <!-- Barra de pesquisa -->
             <div class="col-6 col-md-3 mt-3 search-bar">
                 <form>
                     <div class="form-group position-relative">
-                      <input type="text" class="form-control" placeholder="Pesquisar">
-                      <i class="fa fa-search position-absolute text-secondary" aria-hidden="true"></i>
+                        <input type="text" class="form-control" placeholder="Pesquisar">
+                        <i class="fa fa-search position-absolute text-secondary" aria-hidden="true"></i>
                     </div>
                 </form>
             </div>
@@ -124,28 +128,68 @@
                 <span>Banana</span>
                 >
                 <span>Carrinho</span>
+                >
+                <span>Acompanhar Pedido</span>
             </div>
         </div>
     </div>
 
     <div class="main-content">
         <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <h1>Carrinho</h1>
-                <!-- TODO: implementar conteúdo aqui -->
-                    <div class="item-visualisation">
-                        <div>
-                            <h3>Banana Pera</h3>
-                            <div class="prod-qtty-handler">
-                                <button class="decrement-btn">-</button>
-                                <span>1</span>
-                                <button class="increment-btn">+</button>
+            <div class="purple-div col-12 col-md-8 offset-md-2">
+                <div class="purple-h1">
+                    <h1>Acompanhe seu Carrinho</h1>
+                </div>
+                <div class="purple-wrapper">
+                    <h1>Pedido #0000000000</h1>
+                    <div class="acompanhamento-itens">
+                        <div class="acompanhamento-item">
+                            <div class="acompanhamento-ball acompanhamento-ball-filled">
                             </div>
-                            <span class="prod-price"><h4>R$1,42/kg</h4></span>
+                            <div>
+                                <h1>Pagamento</h1>
+                                <h1>02/02/2021</h1>
+                            </div>
                         </div>
-                        <!-- TODO: implementar imagem banana logo abaixo do escrito aqui -->
-                        <div><img src="banana.jpg" alt="Banana"></img></div>
+                        <div class="acompanhamento-item">
+                            <div class="acompanhamento-ball acompanhamento-ball-filled">
+                            </div>
+                            <div>
+                                <h1>Embalagem Completa</h1>
+                                <h1>06/02/2021</h1>
+                            </div>
+                        </div>
+                        <div class="acompanhamento-item">
+                            <div class="acompanhamento-ball acompanhamento-ball-unfilled">
+                            </div>
+                            <div>
+                                <h1>Entrega</h1>
+                                <h1>Em andamento</h1>
+                            </div>
+                        </div>
                     </div>
+                    <div class="acompanhmento-title">
+                        <h1>
+                            Endereço de Entrega
+                        </h1>
+                        <hr>
+                        <p>
+                            Mariazinha Silva Romeu <br>
+                            Rua Nome de uma Rua, 000 <br>
+                            11111-111 São Paulo, SP <br>
+                        </p>
+                    </div>
+                    <div class="acompanhmento-title">
+                        <h1>
+                            Dados da Compra
+                        </h1>
+                        <hr>
+                        <p>
+                            Cartão de Crédito <br>
+                            R$00,00
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -188,7 +232,7 @@
             </div>
         </div>
     </footer>
-  
+
     <!-- Modal Login -->
     <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-label" aria-hidden="true">
         <div class="modal-dialog">
@@ -214,18 +258,18 @@
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Usuário">
                             </div>
-        
+
                             <div class="mb-3">
                                 <input type="password" class="form-control" placeholder="Senha">
                             </div>
-        
+
                             <button type="submit" class="btn btn-primary submit-button">Entrar</button>
                         </form>
 
                         <!-- links login -->
                         <div class="login-form-link"><a href="#">Esqueci a senha</a></div>
                         <div class="login-form-link"><a href="#">Cadastrar</a></div>
-                        
+
                         <div class="divisor text-center mt-3">
                             <hr class="m-0">
                             <span class="position-relative bg-white d-block">ou</span>
@@ -240,9 +284,12 @@
 
     <!-- vendors libs -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script src="vendors/unslider/dist/js/unslider-min.js"></script>
 
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
